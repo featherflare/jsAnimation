@@ -1,0 +1,128 @@
+.eded{
+    /* height: 2000px; */
+    width: 100%;
+    /* background-color: #9e7b4e; */
+}
+
+.buttonBG {
+    width: fit-content;
+    height: fit-content;
+    /* padding-top: 3%; */
+    padding-top: 33%;
+}
+
+.buttonMove{
+    z-index: 999;
+    padding: 1% 3%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(20%,-50%);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 0px 10px rgb(255, 255, 255,0.05);
+    background-color: #151617;
+    overflow: hidden;
+}
+
+.buttonMove:hover , .buttonMove:focus{
+    color: #fff;
+    background-color: #9e7b4e;
+}
+
+
+.buttonMove:before {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    content: "";
+    width: 50%;
+    background-color: 0 20px 50px rgb(255, 255, 255,0.05);
+}
+.buttonMove span:nth-child(1) {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #151617, #9e7b4e);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.buttonMove span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    opacity: 0;
+    background: linear-gradient(to bottom, #151617, #9e7b4e);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.buttonMove span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(to left, #151617, #9e7b4e);
+    animation: animate3 2s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animate3 {
+    0% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.buttonMove span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    opacity: 0;
+    background: linear-gradient(to top, #151617, #9e7b4e);
+    animation: animate4 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate4 {
+    0% {
+        opacity: 1;
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
