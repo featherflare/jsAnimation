@@ -1,0 +1,47 @@
+.bg {
+  width: 100%;
+  text-align: center;
+  padding-top: 15%;
+  overflow: hidden;
+}
+.card {
+  width: 30%;
+  aspect-ratio: 1/1;
+  border-radius: 5%;
+
+  display: grid;
+  place-items: center;
+  grid-template-areas: 'main';
+
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transfrom 400ms, filter 400ms;
+}
+
+.card > * {
+  grid-area: main;
+}
+
+.card > .image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card > .text {
+  font-size: 1.8rem;
+  color: white;
+  opacity: 0;
+}
+
+.card:is(:hover, :focus) > .image {
+  transform: scale(1.1);
+  filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus) > .text {
+  opacity: 1;
+  transform: scale(1.2);
+}
