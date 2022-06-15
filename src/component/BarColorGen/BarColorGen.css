@@ -1,0 +1,190 @@
+.barcolorbg {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+
+.barcolorgen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.barcolorgen > .colorSlider,
+.colorSlider1,
+.colorSlider2,
+.colorSlider3,
+.colorSlider4 {
+  overflow: hidden;
+  background-color: white;
+  height: 50%;
+  width: 7%;
+  margin: 0 2%;
+  border-radius: 1000px;
+  position: relative;
+}
+.barcolorgen > .colorSlider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border-radius: 1000px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barcolorgen > .colorSlider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.3), 0px 440px 0 400px #2697f3,
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  animation: animate 2.5s ease-in-out infinite;
+}
+
+.barcolorgen > .colorSlider1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border-radius: 1000px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barcolorgen > .colorSlider1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform: translateY(400%);
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.3), 0px 440px 0 400px #2697f3,
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  animation: animate 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.barcolorgen > .colorSlider2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border-radius: 1000px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barcolorgen > .colorSlider2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform: translateY(400%);
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.3), 0px 440px 0 400px #2697f3,
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  animation: animate 2.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.barcolorgen > .colorSlider3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border-radius: 1000px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barcolorgen > .colorSlider3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform: translateY(400%);
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.3), 0px 440px 0 400px #2697f3,
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  animation: animate 2.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.barcolorgen > .colorSlider4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border-radius: 1000px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barcolorgen > .colorSlider4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform: translateY(400%);
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.3), 0px 440px 0 400px #2697f3,
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  animation: animate 2.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(400%);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(400%);
+    filter: hue-rotate(180deg);
+  }
+}

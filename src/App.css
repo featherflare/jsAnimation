@@ -1,15 +1,14 @@
 .App {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
   color: black;
+  position: relative;
 }
 
 .Menu {
   background-color: #111327;
   text-align: left;
   color: white;
-  padding: 10% 0 0 0;
   width: 100%;
 }
 
@@ -20,7 +19,7 @@
 
 .Link {
   padding: 0 0 0 15%;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   width: 100%;
   margin: 10% 0 0 0;
   color: white;
@@ -31,7 +30,26 @@
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  background-color: #464666;
+  /* background-color: #464666; */
   width: 100%;
+  /* z-index: -1; */
   box-shadow: inset 30px 0 25px -25px #252544;
+}
+
+.click {
+  width: 10px !important;
+}
+.click .Link-list {
+  opacity: 0;
+}
+
+#draghandle {
+  width: 10px;
+  background-color: rgb(32, 32, 41);
+  cursor: col-resize;
+  height: 100vh;
+}
+
+body {
+  background-color: #464666;
 }
