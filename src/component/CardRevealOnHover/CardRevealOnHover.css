@@ -1,17 +1,17 @@
 .bg {
   width: 100%;
   text-align: center;
-  padding-top: 15%;
+  /* padding-top: 15%; */
   overflow: hidden;
 }
 .card {
-  width: 30%;
+  width: 40%;
   aspect-ratio: 1/1;
   border-radius: 5%;
 
   display: grid;
   place-items: center;
-  grid-template-areas: 'main';
+  grid-template-areas: "main";
 
   margin: auto;
   overflow: hidden;

@@ -3,8 +3,8 @@ import "./CardBorderMoving.css";
 
 export default function CardBorderMoving() {
   return (
-    <div class="bg">
-      <div class="cardBorder">Testtest</div>
+    <div className="bg">
+      <div className="cardBorder">Testtest</div>
     </div>
   );
 }

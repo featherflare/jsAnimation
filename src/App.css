@@ -6,15 +6,25 @@
 }
 
 .Menu {
-  background-color: #111327;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(214, 213, 213, 0.2);
+  backdrop-filter: blur(10px);
   text-align: left;
   color: white;
   width: 100%;
 }
 
 .Link-list {
-  margin: 10% 0 0 0;
+  margin: 0 0 10% 0;
   width: 100%;
+}
+
+.Link-list:last-child {
+  margin: 0;
 }
 
 .Link {
@@ -22,8 +32,12 @@
   font-size: 1.25em;
   width: 100%;
   margin: 10% 0 0 0;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
+}
+.Link:hover {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 1);
 }
 
 .Component {
@@ -32,24 +46,71 @@
   vertical-align: middle;
   /* background-color: #464666; */
   width: 100%;
+  transition: width 0.3s;
   /* z-index: -1; */
-  box-shadow: inset 30px 0 25px -25px #252544;
+  /* box-shadow: inset 30px 0 25px -25px #252544; */
 }
 
 .click {
-  width: 10px !important;
+  width: 0px !important;
 }
 .click .Link-list {
   opacity: 0;
 }
 
 #draghandle {
+  opacity: 0;
   width: 10px;
-  background-color: rgb(32, 32, 41);
+  background-color: rgba(126, 126, 126, 0.4);
+  backdrop-filter: blur(10px);
   cursor: col-resize;
   height: 100vh;
 }
 
+#draghandle:hover {
+  opacity: 1;
+}
+
 body {
-  background-color: #464666;
+  overflow: hidden;
+  background: linear-gradient(321deg, #38d0e1, #305be1, #9a30e1);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 11% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 11% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 11% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 11% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 11% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 11% 0%;
+  }
 }

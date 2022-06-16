@@ -30,18 +30,18 @@ const items = [
 
 export default function CardBlurWhenNoHover() {
   return (
-    <div class="bg5">
-      <section class="hero-section">
-        <div class="card-grid">
+    <div className="bg5">
+      <section className="hero-section">
+        <div className="card-grid">
           {items.map(({ name, header, imgURL }) => (
-            <div class="cardH">
+            <div className="cardH">
               <div
-                class="card__background"
+                className="card__background"
                 style={{ backgroundImage: `url(${imgURL})` }}
               ></div>
-              <div class="card__content">
-                <p class="card__category">{name}</p>
-                <h3 class="card__heading">{header}</h3>
+              <div className="card__content">
+                <p className="card__category">{name}</p>
+                <h3 className="card__heading">{header}</h3>
               </div>
             </div>
           ))}

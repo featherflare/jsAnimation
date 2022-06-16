@@ -27,19 +27,19 @@ const items = [
 
 export default function CardHoverSildeEffect() {
   return (
-    <div class="bg6">
-      <div class="container-Card">
+    <div className="bg6">
+      <div className="container-Card">
         {items.map(({ name, content, imgURL }) => (
-          <div class="cardSlide">
-            <div class="face face1">
-              <div class="content">
+          <div className="cardSlide">
+            <div className="face face1">
+              <div className="content">
                 <img src={imgURL} />
                 <h3>{name}</h3>
               </div>
             </div>
-            <div class="face face2">
-              <div class="card__heading">
-                <div class="content">
+            <div className="face face2">
+              <div className="card__heading">
+                <div className="content">
                   <p>{content}</p>
                   <a href="#">Read More</a>
                 </div>

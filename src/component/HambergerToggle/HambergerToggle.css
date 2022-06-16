@@ -43,7 +43,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.hamburger.is-active .line {
+.hamburger.active .line {
   background-color: var(--hamburger-color-active);
 }
 
@@ -51,65 +51,65 @@
   background-color: var(--hamburger-hover-color);
 }
 
-.classic.is-active .line:nth-child(2) {
+.classic.active .line:nth-child(2) {
   opacity: 0;
 }
-.classic.is-active .line:nth-child(1) {
+.classic.active .line:nth-child(1) {
   transform-origin: center;
   transform: rotate(45deg) translateY(9px) translateX(9px);
 }
-.classic.is-active .line:nth-child(3) {
+.classic.active .line:nth-child(3) {
   transform-origin: center;
   transform: rotate(-45deg) translateY(-9px) translateX(9px);
 }
 
-.left-arrow.is-active .line:nth-child(1) {
+.left-arrow.active .line:nth-child(1) {
   transform-origin: center;
   transform: rotate(-45deg) translateY(-8px) translateX(-4px);
 }
-.left-arrow.is-active .line:nth-child(3) {
+.left-arrow.active .line:nth-child(3) {
   transform-origin: center;
   transform: rotate(45deg) translateY(8px) translateX(-4px);
 }
 
-.right-arrow.is-active .line:nth-child(1) {
+.right-arrow.active .line:nth-child(1) {
   transform-origin: center;
   transform: rotate(45deg) translateY(-8px) translateX(4px);
 }
-.right-arrow.is-active .line:nth-child(3) {
+.right-arrow.active .line:nth-child(3) {
   transform-origin: center;
   transform: rotate(-45deg) translateY(8px) translateX(4px);
 }
 
-.slant.is-active .line:nth-child(1) {
+.slant.active .line:nth-child(1) {
   width: 30px;
 }
 
-.slant.is-active .line:nth-child(2) {
+.slant.active .line:nth-child(2) {
   width: 40px;
 }
 
-.slant.is-active .line {
+.slant.active .line {
   transform: rotate(30deg);
 }
 
-.minus.is-active .line:nth-child(1) {
+.minus.active .line:nth-child(1) {
   opacity: 0;
   transform-origin: center;
   transform: translateX(-100%);
 }
-.minus.is-active .line:nth-child(3) {
+.minus.active .line:nth-child(3) {
   opacity: 0;
   transform-origin: center;
   transform: translateX(100%);
 }
 
-.plus.is-active .line:nth-child(1) {
+.plus.active .line:nth-child(1) {
   transform-origin: center;
   opacity: 0;
   transform: translateY(250%);
 }
-.plus.is-active .line:nth-child(3) {
+.plus.active .line:nth-child(3) {
   transform-origin: center;
   transform: rotate(90deg) translateX(-13px);
 }

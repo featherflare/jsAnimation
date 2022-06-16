@@ -27,11 +27,12 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54;
               z-index: 1;
               transform: translateY(50%);
               justify-content: center;
-              background-color: #464666;
+              background-color: rgba(0, 0, 0, 0.4);
+              backdrop-filter: blur(10px);
               border-radius: 16px;
               color: #ffffff;
               .content {
-                opacity: 0.3;
+                opacity: 0.5;
                 h3 {
                   margin: 20px 0 0 0;
                   font-size: 2em;
@@ -42,9 +43,10 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54;
               transform: translateY(-50%);
               justify-content: start;
               background-color: #ffffff;
-              box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8);
+              box-shadow: 0 20px 30px rgba(31, 31, 31, 0.4);
               border-radius: 18px;
               text-align: left;
+              opacity: 0;
               .content {
                 padding: 20px;
                 p {
@@ -72,7 +74,9 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54;
                 }
               }
               &.face2 {
+                opacity: 1;
                 transform: translateY(0%);
+                background-color: #ffffff;
                 border-radius: 0 0 16px 16px;
               }
             }

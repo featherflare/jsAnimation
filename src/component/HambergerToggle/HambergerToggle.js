@@ -3,7 +3,7 @@ import $ from "jquery";
 import "./HambergerToggle.css";
 
 $(document).on("click", ".hamburger", function () {
-  $(this).toggleClass("is-active");
+  $(this).toggleClass("active");
 });
 
 $(document).ready(function () {
@@ -19,53 +19,53 @@ $(document).ready(function () {
 
 export default function HambergerToggle() {
   return (
-    <div id="box" class="bg4">
-      <div class="line-vertical og">
+    <div id="box" className="bg4">
+      <div className="line-vertical og">
         <span>
-          <p class="mouseY-cords"></p>
+          <p className="mouseY-cords"></p>
         </span>
       </div>
-      <div class="line-vertical">
+      <div className="line-vertical">
         <span>
-          <p class="mouseX-cords"></p>
+          <p className="mouseX-cords"></p>
         </span>
       </div>
-      <div class="line-vertical">
+      <div className="line-vertical">
         <span></span>
       </div>
-      <div class="line-vertical">
+      <div className="line-vertical">
         <span></span>
       </div>
-      <div class="grid">
-        <div class="hamburger classic">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+      <div className="grid">
+        <div className="hamburger classic">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
-        <div class="hamburger left-arrow">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="hamburger left-arrow">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
-        <div class="hamburger right-arrow">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="hamburger right-arrow">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
-        <div class="hamburger slant">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="hamburger slant">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
-        <div class="hamburger minus">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="hamburger minus">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
-        <div class="hamburger plus">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="hamburger plus">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
       </div>
     </div>

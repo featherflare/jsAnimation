@@ -29,12 +29,15 @@ const items = [
 export default function CardHoverZoomEffect() {
   return (
     <>
-      <div class="bg3">
+      <div className="bg3">
         {items.map(({ name, imgURL }) => (
-          <div class="cardEff" style={{ backgroundImage: `url(${imgURL})` }}>
-            <div class="border">
+          <div
+            className="cardEff"
+            style={{ backgroundImage: `url(${imgURL})` }}
+          >
+            <div className="border">
               <h2>{name}</h2>
-              <div class="icons">
+              <div className="icons">
                 <FaCodepen />
                 <FaInstagram />
                 <FaDribbble />

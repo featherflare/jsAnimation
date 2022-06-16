@@ -1,8 +1,12 @@
 .bg5 {
   align-items: flex-start;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
+  overflow: scroll;
+}
+
+.hero-section {
   padding: 4rem 1.5rem;
 }
 

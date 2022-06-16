@@ -18,18 +18,18 @@ const items = [
 export default function CardBorderMoving() {
   return (
     <>
-      <div class="bg">
-        <div class="options">
+      <div className="bg">
+        <div className="options">
           {items.map(({ header, desc, classN }) => (
-            <div class={`option ${classN}`}>
-              <div class="shadow"></div>
-              <div class="label">
-                <div class="icon">
-                  <i class="fas fa-walking"></i>
+            <div className={`option ${classN}`}>
+              <div className="shadow"></div>
+              <div className="label">
+                <div className="icon">
+                  <i className="fas fa-walking"></i>
                 </div>
-                <div class="info">
-                  <div class="main">{header}</div>
-                  <div class="sub">{desc}</div>
+                <div className="info">
+                  <div className="main">{header}</div>
+                  <div className="sub">{desc}</div>
                 </div>
               </div>
             </div>

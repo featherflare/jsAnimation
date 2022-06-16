@@ -15,7 +15,7 @@ import Profile from "./component/Profile/Profile";
 import { useState } from "react";
 
 function App({ children }) {
-  const [size, setSize] = useState({ x: 400, y: 300 });
+  const [size, setSize] = useState({ x: 380, y: 300 });
   const [click, setClick] = useState("click");
   const handler = (mouseDownEvent) => {
     const startSize = size;
@@ -39,9 +39,11 @@ function App({ children }) {
 
   const clicks = () => {
     if (click == "") {
+      setSize({ x: 0, y: 300 });
       setClick("click");
     } else {
       setClick("");
+      setSize({ x: 380, y: 300 });
     }
   };
 
@@ -49,7 +51,7 @@ function App({ children }) {
     <div className="App ">
       <BrowserRouter>
         <div
-          class={`Menu ${click}`}
+          className={`Menu ${click}`}
           id="container"
           style={{ width: size.x, height: "100vh" }}
           onDoubleClick={clicks}
@@ -111,7 +113,7 @@ function App({ children }) {
           </div>
         </div>
 
-        <div id="draghandle" onMouseDown={handler}></div>
+        <div id="draghandle" onMouseDown={handler} onDoubleClick={clicks}></div>
 
         <div className="Component">
           <Routes>
