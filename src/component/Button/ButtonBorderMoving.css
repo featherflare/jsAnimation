@@ -5,10 +5,13 @@
 }
 
 .buttonBG {
-  width: fit-content;
-  height: fit-content;
+  width: 100vw;
+  height: 100vh;
   /* padding-top: 3%; */
-  padding-top: 33%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .buttonMove {
@@ -17,7 +20,7 @@
   color: #fff;
   position: absolute;
   left: 50%;
-  transform: translate(20%, -50%);
+  transform: translate(-50%, -50%);
   font-size: 2rem;
   letter-spacing: 2px;
   text-decoration: none;

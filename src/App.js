@@ -10,12 +10,15 @@ import CardHoverZoomEffect from "./component/CardHoverZoomEffect/CardHoverZoomEf
 import HambergerToggle from "./component/HambergerToggle/HambergerToggle";
 import CardBlurWhenNoHover from "./component/CardBlurWhenNoHover/CardBlurWhenNoHover";
 import CardHoverSildeEffect from "./component/CardHoverSildeEffect/CardHoverSildeEffect";
+import JQueryTest from "./component/JQueryTest/JQueryTest";
+import GsapTest from "./component/GsapTest/GsapTest";
 import Profile from "./component/Profile/Profile";
+import Navbar from "./component/Navbar";
 
 import { useState } from "react";
 
 function App({ children }) {
-  const [size, setSize] = useState({ x: 380, y: 300 });
+  const [size, setSize] = useState({ x: 380, y: 50 });
   const [click, setClick] = useState("click");
   const handler = (mouseDownEvent) => {
     const startSize = size;
@@ -39,107 +42,54 @@ function App({ children }) {
 
   const clicks = () => {
     if (click == "") {
-      setSize({ x: 0, y: 300 });
+      setSize({ x: 0, y: 0 });
       setClick("click");
     } else {
       setClick("");
-      setSize({ x: 380, y: 300 });
+      setSize({ x: 0, y: 50 });
     }
   };
 
   return (
     <div className="App ">
-      <BrowserRouter>
+      <header>
         <div
-          className={`Menu ${click}`}
+          className={`nav-area  ${click}`}
           id="container"
-          style={{ width: size.x, height: "100vh" }}
+          style={{ width: "100vw", height: size.y }}
           onDoubleClick={clicks}
         >
-          <div className="Link-list">
-            <Link className="Link" to="/">
-              Hello
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/cardRevealOnHover">
-              CardRevealOnHover
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/glassCard">
-              GlassCard
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/buttonAni">
-              ButtonAni
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/barColorGen">
-              BarColorGen
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/cardBorderMoving">
-              CardBorderMoving
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/explandingFlexCard">
-              ExplandingFlexCard
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/cardHoverZoomEffect">
-              CardHoverZoomEffect
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/hambergerToggle">
-              HambergerToggle
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/cardBlurWhenNoHover">
-              CardBlurWhenNoHover
-            </Link>
-          </div>
-          <div className="Link-list">
-            <Link className="Link" to="/cardHoverSildeEffect">
-              CardHoverSildeEffect
-            </Link>
-          </div>
+          <Navbar />
         </div>
-
+      </header>
+      <BrowserRouter>
         <div id="draghandle" onMouseDown={handler} onDoubleClick={clicks}></div>
 
         <div className="Component">
           <Routes>
-            <Route path="/" element={<Profile />} />
-            <Route path="/cardRevealOnHover" element={<CardRevealOnHover />} />
-            <Route path="/glassCard" element={<GlassCard />} />
-            <Route path="/buttonANi" element={<ButtonAni />} />
-            <Route path="/barColorGen" element={<BarColorGen />} />
-            <Route path="/cardBorderMoving" element={<CardBorderMoving />} />
+            <Route index element={<Profile />} />
+            <Route path="" element={<Profile />} />
+            <Route path="cardRevealOnHover" element={<CardRevealOnHover />} />
+            <Route path="glassCard" element={<GlassCard />} />
+            <Route path="buttonANi" element={<ButtonAni />} />
+            <Route path="barColorGen" element={<BarColorGen />} />
+            <Route path="cardBorderMoving" element={<CardBorderMoving />} />
+            <Route path="explandingFlexCard" element={<ExplandingFlexCard />} />
             <Route
-              path="/explandingFlexCard"
-              element={<ExplandingFlexCard />}
-            />
-            <Route
-              path="/cardHoverZoomEffect"
+              path="cardHoverZoomEffect"
               element={<CardHoverZoomEffect />}
             />
-            <Route path="/hambergerToggle" element={<HambergerToggle />} />
+            <Route path="hambergerToggle" element={<HambergerToggle />} />
             <Route
-              path="/cardBlurWhenNoHover"
+              path="cardBlurWhenNoHover"
               element={<CardBlurWhenNoHover />}
             />
             <Route
-              path="/cardHoverSildeEffect"
+              path="cardHoverSildeEffect"
               element={<CardHoverSildeEffect />}
             />
+            <Route path="jQueryTest" element={<JQueryTest />} />
+            <Route path="gsapTest" element={<GsapTest />} />
           </Routes>
         </div>
       </BrowserRouter>

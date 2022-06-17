@@ -1,6 +1,6 @@
 .App {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   color: black;
   position: relative;
 }
@@ -8,18 +8,112 @@
 .Menu {
   z-index: 100;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  background-color: rgba(214, 213, 213, 0.2);
   backdrop-filter: blur(10px);
-  text-align: left;
+  text-align: center;
   color: white;
   width: 100%;
 }
 
+.dropdown-menu {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.25rem;
+  width: fit-content;
+  padding: 10px 5px;
+  height: 30px;
+}
+
+header {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  background-color: rgba(214, 213, 213, 0.4);
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 58px;
+}
+
+.menus {
+  display: flex;
+  list-style: none;
+}
+
+.menu-items {
+  position: relative;
+  font-size: 1.15rem;
+}
+
+.menu-items a {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-items button {
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-items a,
+.menu-items button {
+  text-align: left;
+  padding: 0.7rem 1rem;
+}
+
+.menu-items a:hover,
+.menu-items button:hover {
+  font-size: 1.25rem;
+}
+
+.arrow::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.28em;
+  vertical-align: 0.09em;
+  border-top: 0.42em solid;
+  border-right: 0.32em solid transparent;
+  border-left: 0.32em solid transparent;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  left: auto;
+  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+    0 4px 6px -2px rgba(71, 63, 79, 0.16);
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 15rem;
+  padding: 0.5rem 0;
+  list-style: none;
+  background-color: rgba(214, 213, 213, 0.4);
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
 .Link-list {
-  margin: 0 0 10% 0;
+  margin: 0 0 0% 0;
   width: 100%;
 }
 
@@ -28,15 +122,13 @@
 }
 
 .Link {
-  padding: 0 0 0 15%;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   width: 100%;
-  margin: 10% 0 0 0;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 .Link:hover {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -46,25 +138,29 @@
   vertical-align: middle;
   /* background-color: #464666; */
   width: 100%;
+  height: calc(100vh - 50px);
   transition: width 0.3s;
   /* z-index: -1; */
   /* box-shadow: inset 30px 0 25px -25px #252544; */
 }
 
-.click {
-  width: 0px !important;
-}
-.click .Link-list {
+.click header {
   opacity: 0;
+  display: none;
+}
+.click nav {
+  height: 0;
+  opacity: 0;
+  display: none;
 }
 
 #draghandle {
   opacity: 0;
-  width: 10px;
+  height: 5px;
   background-color: rgba(126, 126, 126, 0.4);
   backdrop-filter: blur(10px);
   cursor: col-resize;
-  height: 100vh;
+  width: 100vw;
 }
 
 #draghandle:hover {
