@@ -13,6 +13,13 @@ import CardHoverSildeEffect from "./component/CardHoverSildeEffect/CardHoverSild
 import JQueryTest from "./component/JQueryTest/JQueryTest";
 import GsapTest from "./component/GsapTest/GsapTest";
 import Profile from "./component/Profile/Profile";
+import GsapCardSelectWithFlip from "./component/GsapTest/GsapDemo/GsapCardSelectWithFlip/GsapCardSelectWithFlip";
+import GsapScrollTrigerDemo from "./component/GsapTest/GsapDemo/GsapScrollTrigerDemo/GsapScrollTrigerDemo";
+import Day1 from "./component/100DaysCSSChallenge/Day1/Day1";
+import Day2 from "./component/100DaysCSSChallenge/Day2/Day2";
+import Day3 from "./component/100DaysCSSChallenge/Day3/Day3";
+import Day4 from "./component/100DaysCSSChallenge/Day4/Day4";
+import Day5 from "./component/100DaysCSSChallenge/Day5/Day5";
 import Navbar from "./component/Navbar";
 
 import { useState } from "react";
@@ -57,7 +64,6 @@ function App({ children }) {
           className={`nav-area  ${click}`}
           id="container"
           style={{ width: "100vw", height: size.y }}
-          onDoubleClick={clicks}
         >
           <Navbar />
         </div>
@@ -90,6 +96,19 @@ function App({ children }) {
             />
             <Route path="jQueryTest" element={<JQueryTest />} />
             <Route path="gsapTest" element={<GsapTest />} />
+            <Route
+              path="gsapCardSelectWithFlip"
+              element={<GsapCardSelectWithFlip />}
+            />
+            <Route
+              path="gsapScrollTrigerDemo"
+              element={<GsapScrollTrigerDemo />}
+            />
+            <Route path="day1" element={<Day1 />} />
+            <Route path="day2" element={<Day2 />} />
+            <Route path="day3" element={<Day3 />} />
+            <Route path="day4" element={<Day4 />} />
+            <Route path="day5" element={<Day5 />} />
           </Routes>
         </div>
       </BrowserRouter>

@@ -1,0 +1,219 @@
+.gsap {
+  overflow: scroll;
+  height: 95vh;
+  .bgGsap {
+    display: flex;
+    padding: 20px;
+    .box {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border-radius: 1rem;
+      width: 100px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      height: 100px;
+      background-color: rgba(184, 212, 221, 0.6);
+      &.blue {
+        background-color: rgba(44, 100, 243, 0.5);
+      }
+      &.red {
+        background-color: rgba(245, 16, 16, 0.5);
+      }
+      &.purple {
+        background-color: rgba(197, 98, 255, 0.5);
+      }
+      &.orange {
+        background-color: rgba(248, 139, 14, 0.5);
+      }
+    }
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border-radius: 50%;
+      width: 100px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      height: 100px;
+      background-color: rgba(184, 212, 221, 0.6);
+    }
+    .sm {
+      width: 20px;
+      height: 20px;
+      position: fixed;
+      transform: translateX(-50%) translateY(-50%);
+      top: 0;
+      left: 0;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      background-color: rgba(64, 255, 0, 0.1);
+      backdrop-filter: blur(5px);
+      pointer-events: none;
+    }
+    .md {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      transform: translateX(-50%) translateY(-50%);
+      top: 0;
+      left: 0;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      background-color: rgba(64, 255, 0, 0.1);
+      backdrop-filter: blur(5px);
+      pointer-events: none;
+    }
+    .lg {
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      transform: translateX(-50%) translateY(-50%);
+      top: 0;
+      left: 0;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      background-color: rgba(64, 255, 0, 0.1);
+      backdrop-filter: blur(5px);
+      pointer-events: none;
+    }
+    .forwardRef {
+      margin: 0 40px;
+      // display: flex;
+      // flex-direction: column;
+    }
+    button {
+      width: 80%;
+      height: 40px;
+      border-radius: 0.5rem;
+      border: 0px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .trigger {
+      margin: 0 60px;
+      .triggerBox {
+        margin: 40px 0;
+        display: flex;
+        * {
+          width: 120px;
+          height: 120px;
+          margin: 0 10px;
+        }
+        .box-1 {
+          background-color: rgba(255, 0, 0, 0.6);
+        }
+        .box-2 {
+          background-color: rgba(0, 94, 255, 0.6);
+        }
+        .box-3 {
+          background-color: rgba(166, 255, 0, 0.6);
+        }
+      }
+    }
+
+    .rndVal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .box {
+        margin: 20px 0;
+      }
+    }
+
+    .reverse {
+      width: 300px;
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      * {
+        margin: 10px 0;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .menu {
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0 30px 0;
+
+      .container {
+        display: flex;
+        position: relative;
+        color: #fff;
+        input {
+          opacity: 0;
+          cursor: pointer;
+          &:checked ~ .checkmark {
+            background-color: rgba(33, 149, 243, 0.6);
+            &:after {
+              display: block;
+            }
+          }
+        }
+        .checkmark {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 5px;
+          height: 13px;
+          width: 13px;
+          background-color: rgba(255, 255, 255, 0.6);
+          border-radius: 50%;
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+          &:after {
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: white;
+          }
+        }
+        &:hover input ~ .checkmark {
+          background-color: rgba(145, 145, 145, 0.6);
+        }
+      }
+    }
+
+    .boxes {
+      * {
+        margin: 10px 0;
+      }
+    }
+
+    .addItem {
+      width: 480px;
+      div {
+        display: flex;
+      }
+      .boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .box {
+          margin: 10px;
+          user-select: none;
+        }
+      }
+      button {
+        user-select: none;
+        margin: 1rem 0.5rem;
+      }
+    }
+  }
+}
