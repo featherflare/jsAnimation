@@ -3,8 +3,16 @@ import "./Day11.scss";
 
 function Day11() {
   return (
-    <div class="frame">
-      <div class="center"></div>
+    <div class="frame11">
+      <div class="invisible-men">
+        <div class="leg left">
+          <div class="shoe"></div>
+        </div>
+        <div class="leg right">
+          <div class="shoe"></div>
+        </div>
+      </div>
+      <div class="floor"></div>
     </div>
   );
 }

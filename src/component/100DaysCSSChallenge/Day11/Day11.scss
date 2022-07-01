@@ -1,6 +1,4 @@
-$bezier: cubic-bezier(0.21, 0.98, 0.6, 0.99);
-
-.frame {
+.frame11 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,19 +7,90 @@ $bezier: cubic-bezier(0.21, 0.98, 0.6, 0.99);
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #42a7a1;
-  color: #fff;
-  font-weight: bold;
-  font-family: "Courier New", "Courier", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  .center {
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(246, 232, 215, 1) 0%,
+    rgba(218, 190, 155, 1) 100%
+  );
+
+  .floor {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 50%;
-    left: 50%;
+    top: 244px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #232323;
+  }
+
+  .invisible-men {
+    animation: fade-in 0.8s ease-out 1s;
+    animation-fill-mode: both;
+    .leg {
+      position: absolute;
+      top: 0;
+      left: 150px;
+      width: 151px;
+      height: 245px;
+      transform-origin: 100% 100%;
+      .shoe {
+        position: absolute;
+        width: 151px;
+        height: 128px;
+        left: 0;
+        bottom: 0;
+        background: url("https://100dayscss.com/codepen/doc-martens.svg") center
+          center no-repeat;
+      }
+      &.left {
+        animation: leg-swing 2s ease-in-out infinite;
+        .shoe {
+          animation: shoe-turn 2s ease-in-out infinite;
+        }
+      }
+      &.right {
+        animation: leg-swing 2s ease-in-out 1s infinite;
+        .shoe {
+          animation: shoe-turn 2s ease-in-out 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leg-swing {
+  0%,
+  100% {
+    transform: translateX(55px);
+  }
+
+  50% {
+    transform: translateX(-105px);
+  }
+}
+
+@keyframes shoe-turn {
+  0%,
+  100% {
+    transform: rotate(-10deg) translateY(-10px);
+  }
+  25% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(15deg) translateY(-5px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-15px);
   }
 }

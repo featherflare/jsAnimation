@@ -18,47 +18,46 @@
   font-family: "Courier New", "Courier", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  .line-box {
-    display: flex;
-    aspect-ratio: 1/1;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    .line {
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .line-box {
       display: flex;
-      flex: 1;
-      background-color: #fff;
-      border-radius: 10rem;
-      margin: 0.5rem 0;
-      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-      transition: transform 0.5s ease;
-      &.one {
-        animation: animate-line-1-rev 0.7s ease-in-out;
+      aspect-ratio: 1/1;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      .line {
+        display: flex;
+        flex: 1;
+        background-color: #fff;
+        border-radius: 10rem;
+        margin: 0.5rem 0;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease;
+        &.one {
+          animation: animate-line-1-rev 0.7s ease-in-out;
+        }
+        &.two {
+          animation: animate-line-2-rev 0.7s ease-in-out;
+        }
+        &.three {
+          animation: animate-line-3-rev 0.7s ease-in-out;
+        }
       }
-      &.two {
-        animation: animate-line-2-rev 0.7s ease-in-out;
-      }
-      &.three {
-        animation: animate-line-3-rev 0.7s ease-in-out;
-      }
-    }
-    &.active {
-      .one {
-        animation: animate-line-1 0.7s ease-in-out forwards;
-      }
-      .two {
-        animation: animate-line-2 0.7s ease-in-out forwards;
-      }
-      .three {
-        animation: animate-line-3 0.7s ease-in-out forwards;
+      &.active {
+        .one {
+          animation: animate-line-1 0.7s ease-in-out forwards;
+        }
+        .two {
+          animation: animate-line-2 0.7s ease-in-out forwards;
+        }
+        .three {
+          animation: animate-line-3 0.7s ease-in-out forwards;
+        }
       }
     }
   }

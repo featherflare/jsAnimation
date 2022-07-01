@@ -3,7 +3,7 @@
 $red: #fa7373;
 $blue: #7ba2ff;
 
-.frame {
+.frame5 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,20 +15,248 @@ $blue: #7ba2ff;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background: #42a7a1;
-  color: #fff;
+  color: #606060;
   font-weight: bold;
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   .card {
-    position: absolute;
+    position: relative;
     top: 90px;
-    left: 60px;
     height: 220px;
     width: 280px;
     background: #fff;
     border-radius: 3px;
     box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 60px;
+      background-color: #f1ba64;
+      color: #fff;
+      padding: 0.75rem;
+      .column {
+        display: flex;
+        justify-content: space-between;
+        .big {
+          font-weight: 600;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+        }
+        .small {
+          font-weight: 400;
+          font-size: 0.75rem;
+        }
+      }
+    }
+    .parameter {
+      position: absolute;
+      text-align: right;
+      top: 60px;
+      right: 0;
+      width: 280px;
+      padding: 0.65rem 0 0.85rem 0;
+      span {
+        position: relative;
+        font-size: 0.5rem;
+        padding: 0 10px 0 25px;
+        color: #606060;
+        &::before {
+          position: absolute;
+          top: 4px;
+          left: 6px;
+          display: block;
+          content: " ";
+          width: 0.75rem;
+          height: 0.25rem;
+          border-radius: 5rem;
+        }
+      }
+      .red::before {
+        background-color: $red;
+      }
+      .blue::before {
+        background-color: $blue;
+      }
+    }
+    .statistic {
+      width: 260px;
+      position: relative;
+      height: 81px;
+      margin: 0 auto;
+      top: 35px;
+      .line-1 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background: #f2f2f2;
+      }
+      .line-2 {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background: #f2f2f2;
+      }
+      .line-3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #f2f2f2;
+      }
+      .data {
+        position: absolute;
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          polyline {
+            fill: none;
+            stroke-width: 2px;
+            stroke-linecap: round;
+          }
+        }
+        &.red polyline {
+          stroke: $red;
+        }
+        &.blue polyline {
+          stroke: $blue;
+        }
+        .tooltip {
+          position: absolute;
+          bottom: 0.75rem;
+          left: 50%;
+          transform: translate3d(-50%, 10px, 0);
+          font-size: 0.75rem;
+          font-weight: 600;
+          line-height: 0.75rem;
+          color: #fff;
+          padding: 0.5rem 0.35rem;
+          border-radius: 3px;
+          visibility: hidden;
+          opacity: 0;
+          transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+          &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            height: 6px;
+            width: 6px;
+            left: 50%;
+            margin-left: -3px;
+            bottom: -3px;
+            transform: rotate(45deg);
+          }
+        }
+        [class^="point-"] {
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 3px;
+          cursor: pointer;
+          z-index: 10;
+          &:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+        &.red {
+          [class^="point-"],
+          .tooltip,
+          .tooltip::after {
+            background: $red;
+          }
+
+          .point-1 {
+            left: 7px;
+            top: 43px;
+          }
+          .point-2 {
+            left: 48px;
+            top: 9px;
+          }
+          .point-3 {
+            left: 88px;
+            top: 20px;
+          }
+          .point-4 {
+            left: 128px;
+            top: 8px;
+          }
+          .point-5 {
+            left: 169px;
+            top: 35px;
+          }
+          .point-6 {
+            left: 209px;
+            top: 45px;
+          }
+          .point-7 {
+            left: 249px;
+            top: 16px;
+          }
+        }
+        &.blue {
+          [class^="point-"],
+          .tooltip,
+          .tooltip:after {
+            background: $blue;
+          }
+
+          .point-1 {
+            left: 7px;
+            top: 58px;
+          }
+          .point-2 {
+            left: 48px;
+            top: 47px;
+          }
+          .point-3 {
+            left: 88px;
+            top: 62px;
+          }
+          .point-4 {
+            left: 128px;
+            top: 52px;
+          }
+          .point-5 {
+            left: 169px;
+            top: 58px;
+          }
+          .point-6 {
+            left: 209px;
+            top: 71px;
+          }
+          .point-7 {
+            left: 249px;
+            top: 61px;
+          }
+        }
+      }
+    }
+    .days {
+      position: absolute;
+      bottom: 0;
+      width: 280px;
+      margin: 0 auto;
+      .day {
+        display: block;
+        float: left;
+        width: (100% / 7);
+        font-size: 9px;
+        color: #949494;
+        line-height: 30px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
   }
 }

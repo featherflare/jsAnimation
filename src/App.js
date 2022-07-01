@@ -20,6 +20,14 @@ import Day2 from "./component/100DaysCSSChallenge/Day2/Day2";
 import Day3 from "./component/100DaysCSSChallenge/Day3/Day3";
 import Day4 from "./component/100DaysCSSChallenge/Day4/Day4";
 import Day5 from "./component/100DaysCSSChallenge/Day5/Day5";
+import Day6 from "./component/100DaysCSSChallenge/Day6/Day6";
+import Day7 from "./component/100DaysCSSChallenge/Day7/Day7";
+import Day8 from "./component/100DaysCSSChallenge/Day8/Day8";
+import Day9 from "./component/100DaysCSSChallenge/Day9/Day9";
+import Day10 from "./component/100DaysCSSChallenge/Day10/Day10";
+import Day11 from "./component/100DaysCSSChallenge/Day11/Day11";
+import Day12 from "./component/100DaysCSSChallenge/Day12/Day12";
+import Day13 from "./component/100DaysCSSChallenge/Day13/Day13";
 import Navbar from "./component/Navbar";
 
 import { useState } from "react";
@@ -109,6 +117,14 @@ function App({ children }) {
             <Route path="day3" element={<Day3 />} />
             <Route path="day4" element={<Day4 />} />
             <Route path="day5" element={<Day5 />} />
+            <Route path="day6" element={<Day6 />} />
+            <Route path="day7" element={<Day7 />} />
+            <Route path="day8" element={<Day8 />} />
+            <Route path="day9" element={<Day9 />} />
+            <Route path="day10" element={<Day10 />} />
+            <Route path="day11" element={<Day11 />} />
+            <Route path="day12" element={<Day12 />} />
+            <Route path="day13" element={<Day13 />} />
           </Routes>
         </div>
       </BrowserRouter>

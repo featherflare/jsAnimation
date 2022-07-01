@@ -1,6 +1,8 @@
 $bezier: cubic-bezier(0.21, 0.98, 0.6, 0.99);
 
-.frame {
+$brown: #786450;
+
+.frame6 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,17 +13,122 @@ $bezier: cubic-bezier(0.21, 0.98, 0.6, 0.99);
   border-radius: 2px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #42a7a1;
-  color: #fff;
+  background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+  color: $brown;
   font-weight: bold;
-  font-family: "Courier New", "Courier", sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   .center {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 50%;
-    left: 50%;
+    top: 50px;
+    left: 40px;
+    height: 299px;
+    width: 320px;
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    .profile {
+      width: 200px;
+      padding: 2.5rem;
+      .image {
+        position: relative;
+        width: 70px;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+        * {
+          position: absolute;
+          border-radius: 50%;
+          aspect-ratio: 1/1;
+        }
+        .circle-1 {
+          position: absolute;
+          width: 76px;
+          top: -3px;
+          left: -3px;
+          box-sizing: border-box;
+          border-width: 1px;
+          border-style: solid;
+          border-color: $brown $brown $brown transparent;
+          transition: all 1.5s ease-in-out;
+        }
+        .circle-2 {
+          @extend .circle-1;
+          width: 82px;
+          top: -6px;
+          left: -6px;
+          border-color: $brown transparent $brown $brown;
+        }
+        img {
+          display: block;
+          background: #f5e8df;
+        }
+        &:hover {
+          cursor: pointer;
+          .circle-1 {
+            transform: rotate(360deg);
+          }
+          .circle-2 {
+            transform: rotate(-360deg);
+          }
+        }
+      }
+      .name {
+        font-weight: 600;
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+      .job {
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        font-size: 0.65rem;
+      }
+      .btn {
+        margin-top: 0.5rem;
+        border: 1px solid $brown;
+        background-color: #fff;
+        color: $brown;
+        border-radius: 5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        width: 95%;
+        padding: 0.45rem;
+        transition: color 0.5s ease-in-out;
+        &:hover {
+          border: 1px solid $brown;
+          color: #fff;
+          background-color: $brown;
+        }
+      }
+    }
+    .stats {
+      width: 120px;
+      .box {
+        background-color: #f5e8df;
+        height: calc(100% / 3);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(2) {
+          margin: 1px 0;
+        }
+        &:hover {
+          background: #e1cfc2;
+          cursor: pointer;
+        }
+        .value {
+          font-weight: 600;
+          font-size: 1rem;
+        }
+        .parameter {
+          font-weight: 400;
+          font-size: 0.65rem;
+        }
+      }
+    }
   }
 }
