@@ -15,6 +15,8 @@ import GsapTest from "./component/GsapTest/GsapTest";
 import Profile from "./component/Profile/Profile";
 import GsapCardSelectWithFlip from "./component/GsapTest/GsapDemo/GsapCardSelectWithFlip/GsapCardSelectWithFlip";
 import GsapScrollTrigerDemo from "./component/GsapTest/GsapDemo/GsapScrollTrigerDemo/GsapScrollTrigerDemo";
+import Navbar from "./component/Navbar";
+import { useState } from "react";
 import Day1 from "./component/100DaysCSSChallenge/Day1/Day1";
 import Day2 from "./component/100DaysCSSChallenge/Day2/Day2";
 import Day3 from "./component/100DaysCSSChallenge/Day3/Day3";
@@ -28,9 +30,12 @@ import Day10 from "./component/100DaysCSSChallenge/Day10/Day10";
 import Day11 from "./component/100DaysCSSChallenge/Day11/Day11";
 import Day12 from "./component/100DaysCSSChallenge/Day12/Day12";
 import Day13 from "./component/100DaysCSSChallenge/Day13/Day13";
-import Navbar from "./component/Navbar";
-
-import { useState } from "react";
+import Day14 from "./component/100DaysCSSChallenge/Day14/Day14";
+import Day15 from "./component/100DaysCSSChallenge/Day15/Day15";
+import Day16 from "./component/100DaysCSSChallenge/Day16/Day16";
+import Day17 from "./component/100DaysCSSChallenge/Day17/Day17";
+import Day18 from "./component/100DaysCSSChallenge/Day18/Day18";
+import Day19 from "./component/100DaysCSSChallenge/Day19/Day19";
 
 function App({ children }) {
   const [size, setSize] = useState({ x: 380, y: 50 });
@@ -125,6 +130,12 @@ function App({ children }) {
             <Route path="day11" element={<Day11 />} />
             <Route path="day12" element={<Day12 />} />
             <Route path="day13" element={<Day13 />} />
+            <Route path="day14" element={<Day14 />} />
+            <Route path="day15" element={<Day15 />} />
+            <Route path="day16" element={<Day16 />} />
+            <Route path="day17" element={<Day17 />} />
+            <Route path="day18" element={<Day18 />} />
+            <Route path="day19" element={<Day19 />} />
           </Routes>
         </div>
       </BrowserRouter>

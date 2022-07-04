@@ -74,7 +74,9 @@ header {
 
 .menu-items a:hover,
 .menu-items button:hover {
-  font-size: 1.25rem;
+  background-color: rgba(214, 213, 213, 0.8);
+  color: #fff;
+  border-radius: 0.5rem;
 }
 
 .arrow::after {
