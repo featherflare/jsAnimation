@@ -1,4 +1,6 @@
-.frame {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+.frame26 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,19 +9,111 @@
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  background: #42a7a1;
+  background: #c7d6e1;
   color: #fff;
-  font-weight: bold;
-  font-family: "Courier New", "Courier", sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  .center {
+  .card26 {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 50%;
-    left: 50%;
+    z-index: 0;
+    width: 240px;
+    height: 150px;
+    top: 125px;
+    left: 80px;
+    background: #fff;
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.5);
+    &.active {
+      pointer-events: all;
+      z-index: 1;
+      animation: fadeIn 0.6s ease-in-out both 0.5s;
+    }
+    &.inactive {
+      z-index: 2;
+      animation: fadeOut 0.5s ease-in-out both;
+    }
+    .number-bg {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      right: -30px;
+      background: #8391a1;
+      transform: rotate(-45deg);
+    }
+    .number {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .text {
+      text-align: center;
+      padding: 20px 10px;
+      .headline {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        color: #616e7d;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 17px;
+        color: #8391a1;
+        margin: 0px;
+      }
+    }
+    .button {
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #3ca7fb;
+      cursor: pointer;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 38px;
+      font-size: 13px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: #2196f3;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.15);
   }
 }

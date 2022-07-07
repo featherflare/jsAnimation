@@ -1,12 +1,19 @@
 import React, { useEffect, useRef } from "react";
-import "./Day12.scss";
+import "./Day24.scss";
 
-function Day12() {
+function Day24() {
   return (
-    <div class="frame">
-      <div class="center"></div>
+    <div class="frame24">
+      <input type="checkbox" id="button" class="hidden" />
+      <label for="button" class="button">
+        Finish
+        <img src="https://100dayscss.com/codepen/checkmark-green.svg" />
+      </label>
+      <svg class="circle">
+        <circle cx="30" cy="30" r="29" />
+      </svg>
     </div>
   );
 }
 
-export default Day12;
+export default Day24;

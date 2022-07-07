@@ -1,4 +1,6 @@
-.frame {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.frame24 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,19 +9,128 @@
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  background: #42a7a1;
+  background: #57d895;
   color: #fff;
-  font-weight: bold;
-  font-family: "Courier New", "Courier", sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  .center {
+  .hidden {
+    display: none;
+  }
+  .button {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 50%;
-    left: 50%;
+    height: 60px;
+    width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    top: 170px;
+    left: 75px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    line-height: 56px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3 ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: #37be77;
+    }
+    img {
+      position: absolute;
+      z-index: 2;
+      top: 16px;
+      left: 15px;
+      opacity: 0;
+    }
+  }
+  .circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    top: 170px;
+    left: 170px;
+    fill: none;
+    stroke-width: 2px;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-dasharray: 183 183;
+    stroke-dashoffset: 183;
+    pointer-events: none;
+    transform: rotate(-90deg);
+  }
+
+  input:checked {
+    & ~ .button {
+      animation: button 0.5s ease both, fill 0.5s ease-out 1.5s forwards;
+
+      img {
+        animation: check 0.5s ease-out 1.5s both;
+      }
+    }
+
+    & ~ .circle {
+      animation: circle 2s ease-out 0.5s both;
+    }
+  }
+}
+
+@keyframes button {
+  0% {
+    width: 250px;
+    left: 75px;
+    border-color: #fff;
+    color: #fff;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    width: 60px;
+    left: 170px;
+    border-color: #45b078;
+    background: transparent;
+    color: transparent;
+  }
+}
+
+@keyframes fill {
+  0% {
+    border-color: #fff;
+    background: transparent;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 183;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 183;
+    transform: rotate(-90deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 500 500;
+    transform: rotate(-90deg) scale(2);
+    opacity: 0;
   }
 }
