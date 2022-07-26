@@ -4,15 +4,14 @@ import { FaPhoneAlt, FaComments, FaHeart, FaPlus } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import "./Day13.scss";
 
-$(".profile").on("click", function () {
-  $(".detail").addClass("active");
-});
-
-$(".close").on("click", function () {
-  $(".detail").removeClass("active");
-});
-
 function Day13() {
+  $(".profile").on("click", function () {
+    $(".detail").addClass("active");
+  });
+
+  $(".close").on("click", function () {
+    $(".detail").removeClass("active");
+  });
   const items = [
     { id: 1, src: "https://100dayscss.com/codepen/13-1.jpg" },
     { id: 2, src: "https://100dayscss.com/codepen/13-2.jpg" },
