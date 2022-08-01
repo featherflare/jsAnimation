@@ -1,12 +1,21 @@
 import React, { useEffect, useRef } from "react";
-import "./Day30.scss";
+import "./Day44.scss";
 
-function Day30() {
+function Day44() {
+  function Repeat(props) {
+    let items = [];
+    for (let i = 1; i <= props.numTimes; i++) {
+      items.push(props.children(i));
+    }
+    return <>{items}</>;
+  }
   return (
-    <div class="frame">
-      <div class="center"></div>
+    <div class="frame44">
+      <Repeat numTimes={20}>
+        {(i) => <div class={`rect rect-${i}`}></div>}
+      </Repeat>
     </div>
   );
 }
 
-export default Day30;
+export default Day44;
