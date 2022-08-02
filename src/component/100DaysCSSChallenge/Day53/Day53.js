@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import "./Day30.scss";
+import "./Day53.scss";
 
-function Day30() {
+function Day53() {
   return (
-    <div class="frame">
-      <div class="center"></div>
+    <div class="frame53">
+      <div class="center">
+        <input type="range" min="0" max="100" />
+      </div>
     </div>
   );
 }
 
-export default Day30;
+export default Day53;
