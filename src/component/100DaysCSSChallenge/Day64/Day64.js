@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import "./Day30.scss";
+import "./Day64.scss";
 
-function Day30() {
+function Day64() {
   return (
-    <div class="frame">
-      <div class="center"></div>
+    <div class="frame64">
+      <div class="button" onclick="void(0);">
+        Hover me
+      </div>
     </div>
   );
 }
 
-export default Day30;
+export default Day64;
