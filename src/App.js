@@ -87,6 +87,16 @@ import Day67 from "./component/100DaysCSSChallenge/Day67/Day67";
 import Day68 from "./component/100DaysCSSChallenge/Day68/Day68";
 import Day69 from "./component/100DaysCSSChallenge/Day69/Day69";
 import Day70 from "./component/100DaysCSSChallenge/Day70/Day70";
+import Day71 from "./component/100DaysCSSChallenge/Day71/Day71";
+import Day72 from "./component/100DaysCSSChallenge/Day72/Day72";
+import Day73 from "./component/100DaysCSSChallenge/Day73/Day73";
+import Day74 from "./component/100DaysCSSChallenge/Day74/Day74";
+import Day75 from "./component/100DaysCSSChallenge/Day75/Day75";
+import Day76 from "./component/100DaysCSSChallenge/Day76/Day76";
+import Day77 from "./component/100DaysCSSChallenge/Day77/Day77";
+import Day78 from "./component/100DaysCSSChallenge/Day78/Day78";
+import Day79 from "./component/100DaysCSSChallenge/Day79/Day79";
+import Day80 from "./component/100DaysCSSChallenge/Day80/Day80";
 
 function App({ children }) {
   const [size, setSize] = useState({ x: 380, y: 50 });
@@ -238,6 +248,16 @@ function App({ children }) {
             <Route path="day68" element={<Day68 />} />
             <Route path="day69" element={<Day69 />} />
             <Route path="day70" element={<Day70 />} />
+            <Route path="day71" element={<Day71 />} />
+            <Route path="day72" element={<Day72 />} />
+            <Route path="day73" element={<Day73 />} />
+            <Route path="day74" element={<Day74 />} />
+            <Route path="day75" element={<Day75 />} />
+            <Route path="day76" element={<Day76 />} />
+            <Route path="day77" element={<Day77 />} />
+            <Route path="day78" element={<Day78 />} />
+            <Route path="day79" element={<Day79 />} />
+            <Route path="day80" element={<Day80 />} />
           </Routes>
         </div>
       </BrowserRouter>
