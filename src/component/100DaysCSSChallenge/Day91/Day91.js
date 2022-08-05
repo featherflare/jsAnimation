@@ -1,12 +1,22 @@
 import React, { useEffect, useRef } from "react";
-import "./Day30.scss";
+import "./Day91.scss";
 
-function Day30() {
+function Day91() {
   return (
-    <div class="frame">
-      <div class="center"></div>
+    <div class="frame91">
+      <div class="center">
+        <div class="loader" onclick="void(0);">
+          <div class="plane bottom"></div>
+          <div class="plane left"></div>
+          <div class="plane right"></div>
+          <div class="plane back"></div>
+          <div class="plane front"></div>
+          <div class="plane top"></div>
+          <div class="plane fill-top"></div>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Day30;
+export default Day91;
