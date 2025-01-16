@@ -1,0 +1,32 @@
+video,
+canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  aspect-ratio: 4/3;
+}
+
+.pointer {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border-radius: 50%;
+}
+
+.slider {
+  overflow: auto;
+  width: 100%;
+  height: 100dvh;
+
+  div {
+    height: 100dvh;
+    @for $i from 1 through 28 {
+      &:nth-child(#{$i}) {
+        background-color: hsl($i * 20, 100%, 50%);
+      }
+    }
+  }
+}
