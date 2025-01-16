@@ -181,6 +181,8 @@ function VideoSlider() {
 
       const targetScrollTop = deltaY * maxScrollTop
       slider.current.scrollTop -= targetScrollTop
+
+      console.log()
     }
   }
 
