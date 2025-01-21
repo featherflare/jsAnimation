@@ -1,0 +1,75 @@
+.per {
+  .slider {
+    overflow: auto;
+    width: 100%;
+    height: 90dvh;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    div {
+      top: 0%;
+      left: 50%;
+      position: absolute;
+      height: 10dvh;
+      width: 10dvw;
+      $total: 20;
+      @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+          background-color: hsl($i * 360 / 28, 100%, 50%);
+          // ($i - 1) * -1 * (360 / $total) *
+          transform: scale(calc(1 + (($i - 1) * 0.04)))
+            // rotateX(calc(($i - 1) * 1deg))
+            // rotateY(calc(($i - 1) * 1deg))
+            translateX(
+              (
+                  (($i - 1) * (random(600) / 10)) *
+                    (-1) *
+                    (if($i % 2 == 0, 1, -1))
+                ) *
+                1%
+            )
+            translateY((12 + ($i - 2)) * (100 - ($i - 1)) * 1%)
+            translateZ(-400px);
+
+          animation: moving#{$i}
+            (4 + random(6)) +
+            s
+            random(3) +
+            s
+            normal
+            both
+            infinite;
+        }
+
+        @keyframes moving#{$i } {
+          0% {
+            transform: scale(calc(1 + (($i - 1) * 0.04)))
+              // rotateX(calc(($i - 1) * 1deg))
+              // rotateY(calc(($i - 1) * 1deg))
+              translateX(
+                (
+                    (($i - 1) * (random(600) / 10)) * (-1) *
+                      (if($i % 2 == 0, 1, -1))
+                  ) * 1%
+              )
+              translateY((-21 + ($i - 2)) * (100 - ($i - 1)) * 1%)
+              translateZ(-400px);
+          }
+          100% {
+            transform: scale(calc(1 + (($i - 1) * 0.04)))
+              // rotateX(calc(($i - 1) * 1deg))
+              // rotateY(calc(($i - 1) * 1deg))
+              translateX(
+                (
+                    (($i - 1) * (random(600) / 10)) * (-1) *
+                      (if($i % 2 == 0, 1, -1))
+                  ) * 1%
+              )
+              translateY((12 + ($i - 2)) * (100 - ($i - 1)) * 1%)
+              translateZ(-400px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -54,6 +54,10 @@ export const menuItems = [
             title: 'AxisY',
             path: 'axisY',
           },
+          {
+            title: 'HandDetect',
+            path: 'handDetect',
+          },
         ],
       },
     ],

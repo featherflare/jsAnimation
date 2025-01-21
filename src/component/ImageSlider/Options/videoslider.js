@@ -86,37 +86,6 @@ function VideoSlider() {
           if (Math.abs(deltaY) > 0.01 && indexFingerAxisZ >= 1)
             scrollBox(deltaY)
 
-          const distance = {
-            x: landmarks[8].x - landmarks[12].x,
-            y: landmarks[8].y - landmarks[12].y,
-            z: landmarks[8].z - landmarks[12].z,
-          }
-
-          const test = Math.sqrt(
-            landmarks[8].x * landmarks[8].x +
-              landmarks[8].y * landmarks[8].y +
-              landmarks[8].z * landmarks[8].z
-          )
-          const test2 = Math.sqrt(
-            landmarks[12].x * landmarks[12].x +
-              landmarks[12].y * landmarks[12].y +
-              landmarks[12].z * landmarks[12].z
-          )
-
-          const displacement1 = Math.sqrt(
-            distance.x * distance.x + distance.y * distance.y
-          )
-
-          const displacement2 = Math.sqrt(
-            distance.z * distance.z + distance.y * distance.y
-          )
-
-          const displacement3 = Math.sqrt(
-            distance.x * distance.x + distance.z * distance.z
-          )
-
-          // console.log(test, test2, Math.abs(test - test2))
-
           // Update position only if it changes significantly
           setPosition((prev) => {
             const dx = Math.abs(prev.x - normalizedX)

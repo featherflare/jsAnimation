@@ -119,6 +119,7 @@ import Day99 from './component/100DaysCSSChallenge/Day99/Day99'
 import Day100 from './component/100DaysCSSChallenge/Day100/Day100'
 import ImageSliders from './component/ImageSlider/ImageSlider'
 import VideoSlider from './component/ImageSlider/Options/videoslider'
+import PerspectiveYSlider from './component/ImageSlider/Options/perspectiveYSlider'
 
 function App({ children }) {
   const [size, setSize] = useState({ x: 380, y: 50 })
@@ -172,7 +173,8 @@ function App({ children }) {
             <Route index element={<Profile />} />
             <Route path='' element={<Profile />} />
             <Route element={<ImageSliders />}>
-              <Route path='axisY' element={<VideoSlider />} />
+              <Route path='handDetect' element={<VideoSlider />} />
+              <Route path='axisY' element={<PerspectiveYSlider />} />
             </Route>
             <Route path='cardRevealOnHover' element={<CardRevealOnHover />} />
             <Route path='glassCard' element={<GlassCard />} />
